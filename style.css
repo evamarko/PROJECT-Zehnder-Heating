@@ -1,0 +1,298 @@
+:root {
+  --primary-color: #e20119;
+  --secondary-color: #00464e;
+  --nav-font: #7fa2a6;
+  --secondary-alfa: rgba(0, 70, 78, 0.9);
+  --section-bg: #e4eced;
+  --primary-font: #242a34;
+  --secondary-font: #00464e;
+  --footer-bg: #336b71;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* NAVIGATION */
+.navigation {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1;
+  top: 0;
+}
+
+.navigation-wrapper {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-item {
+  display: inline-block;
+  padding: 22px;
+}
+
+.navigation-item a {
+  text-decoration: none;
+  color: var(--nav-font);
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media only screen and (max-width: 576px) {
+  .menu-icon {
+    display: block;
+    text-align: right;
+    padding: 22px;
+  }
+
+  .navigation-list {
+    display: none;
+  }
+
+  .navigation-wrapper {
+    max-width: 95%;
+  }
+}
+
+/* HERO SECTION */
+.hero-section {
+  height: 650px;
+  margin-top: 63px;
+  background-image: url(./images/radiator-bg-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-wrapper {
+  max-width: 70%;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+}
+
+.hero-text-container {
+  position: absolute;
+  bottom: 48px;
+  right: 0px;
+  background-color: var(--secondary-alfa);
+  padding: 65px;
+  border-radius: 3px;
+  max-width: 650px;
+}
+
+.hero-subtitle {
+  font-size: 24;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: 60px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.hero-btn {
+  background-color: var(--primary-color);
+  border: none;
+  padding: 12px 16px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.hero-btn .fa-chevron-right {
+  margin-left: 8px;
+}
+
+@media only screen and (max-width: 576px) {
+  .hero-section {
+    height: calc(100vh - 63px);
+  }
+
+  .hero-wrapper {
+    max-width: 95%;
+  }
+
+  .hero-text-container {
+    width: 100%;
+  }
+
+  .hero-title {
+    font-size: 48px;
+  }
+}
+
+/* TEXT MEDIA */
+.text-media {
+  padding: 130px 0;
+}
+
+.text-media-wrapper {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.text-media-title {
+  font-size: 40px;
+  margin-bottom: 45px;
+  text-align: center;
+  color: var(--secondary-font);
+}
+
+.text-media-text {
+  text-align: center;
+  color: var(--secondary-font);
+}
+
+.bg-section {
+  background-color: var(--section-bg);
+}
+
+.bg-image {
+  padding: 0;
+  height: 650px;
+  background-image: url("./images/workers-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 576px) {
+  .text-media-wrapper {
+    width: 95%;
+  }
+}
+
+/* ARTICLES */
+.articles {
+  padding: 65px 0;
+  color: var(--primary-font);
+}
+
+.articles-title {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 45px;
+  color: var(--secondary-font);
+}
+
+.articles-subtitle {
+  text-align: center;
+  margin-bottom: 45px;
+  color: var(--secondary-font);
+}
+
+/* ARTICLE */
+.article {
+  margin-bottom: 45px;
+}
+
+.article-wrapper {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.article-img {
+  margin-bottom: 25px;
+  height: 650px;
+}
+
+.article-img img {
+  transition: transform 0.25s ease-in-out;
+}
+
+.article-img:hover img {
+  transform: scale(1.08);
+}
+
+.article-date {
+  margin-bottom: 10px;
+}
+
+.article-title {
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+.article-link a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.article-link .fa-chevron-right {
+  margin-left: 8px;
+}
+
+.article-link a i {
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 576px) {
+  .article-wrapper {
+    max-width: 95%;
+  }
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--footer-bg);
+  color: #fff;
+  padding: 85px 0;
+}
+
+.footer-wrapper {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.contact {
+}
+
+.contact-title {
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+.contact-list {
+  list-style-type: none;
+}
+
+.contact-list li {
+  margin-bottom: 18px;
+}
+
+.contact-list li:last-child {
+  margin-bottom: 0px;
+}
+
+.contact a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 576px) {
+  .footer-wrapper {
+    max-width: 95%;
+  }
+}
